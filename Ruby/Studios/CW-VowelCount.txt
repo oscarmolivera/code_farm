@@ -1,0 +1,49 @@
+===== CONTAR VOCALES EN UNA STRING ======
+1)
+  · Input con metodo chars
+  · aplicar metodo select con variable h
+  · filtro de la variable h sera cuando sea igual a un RegExp del tipo /[aeiou]/
+  · contar el objeto resultante
+
+2) 
+  · crear un arreglo <arr1>
+  · convierte input en una funcion enumerable con los parametros: metodo SCAN y RegExp de /[aeiou]/
+  · recorro ese enum com MAP con varible filtro
+  · la variable f se agrega al <arr1>
+  · retornar con el LENGTH
+
+3)
+  · Input con el metodo DOWNCASE
+  · y aplicar COUNT con el string de vocales 
+
+4)
+  · Input con metodo SCAN enviando el parametro RegExp
+  · retornar el SIZE de ese objeto creado.
+
+5)
+  ·Input con el metodo COUNT enviando el parametro: string de vocales.
+
+6)
+  ·Restar dos SIZE.
+    el primero es el Input SIZE
+    el segndo es el SIZE de quienes no complan con la condicion TR
+    la condicion TR es el string de Vocales y un vacio.
+
+7)
+  · Dadas las vocales en hash
+  · Seccionar input con SPLIT vacio
+  · aplico el metodo INJECT con parametro : 0 en un loop con variable 't' y 'y'
+  · recorro el loop preguntando con el metod INCLUDE? si el hash de vocales contiene 't' si es asi suma 1 a 'y'
+  · sino solo y
+
+8)
+  · dado un arreglo de vocales
+  · Separa el input con el metodo SPLIT vacio
+  · aplica el metodo SELECT con la variable 'e'con la condicion
+  · arreglo de vocales INCLUDE? con parametro 'e'
+  · retorna el COUNT
+
+9)
+  · la variable string sera igual a input usando el metodo GSUB con dos parametros
+  · un RegExp y un asterisco que remplazara donde coincidan cone l RegExp.
+  · aplica COUNT para contar cuantos astericos tiene la variable string 

@@ -1,0 +1,64 @@
+===== String incrementer  ======
+
+1)
+  · Aplicar el metodo SUB al string enviando como parametro un RegExp 
+  · A esto se le aplica un bloque de codigo
+  · la variable de bloque 'n' con a la se le aplica el operador ternario
+  · Donde se pregunta usando el metodo EMPTY? si esta vacio, si es cierto
+  · se devuelve un uno. 
+  · sino:
+  · se le aplica a la variable 'n' el metodo SUCC  
+
+2)
+  · Bajo un operador ternario se pregunta si input es subindice de un RegExp
+  · Si es cierto, se usa el metodo SUB para re
+  ·
+  
+
+3)
+  · 
+  · 
+  ·
+  
+
+4)
+  · 
+  · 
+  ·
+  
+
+5)
+  · 
+  · 
+  ·
+  
+
+6)
+  · 
+  · 
+  ·
+  
+
+7)
+  · 
+  · 
+  ·
+  
+
+8)
+  · 
+  · 
+  ·
+  
+
+9)
+  · 
+  · 
+  ·
+  
+
+10)
+  · 
+  · 
+  ·
+  

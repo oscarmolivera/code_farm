@@ -1,0 +1,79 @@
+===== SUma el primer Nth elemento de una serie ======
+
+1)
+  · retorna un texto usando el metodo SPRINTF con dos parametros:
+  · numeral punto el numero dos y  efe y el resultado de metodo def <Sr>
+  · El def <Sr> retorna cero en string si n es igual a cero
+  · Si n es igual a 1 retorna 1 sino:
+  · retona el mismo metodo def <Sr> con ene menos 1,  mas uno punto cero para decimal que divide
+  · a 3 que multiplica ene mas 1,  mas un uno
+
+2)
+  · Retorna un string de cero con dos decimales si 'n' es igual a cero
+  · retorna texto con: porcentaje punto 2f y mumeral del resultado de=
+  · usando el rango de 0 a menos n, esto se convierte en un arreglo
+  · se usa el metodo MAP para este arreglo con la variable 'd'
+  · se le aplica la formula 1 / 1+ (3* d)
+  · y se suma todo con REDUCE(:+)
+
+3)
+  · Retorna un string de cero con dos decimales si 'n' es igual a cero
+  · retorna en formato de '%.2f' % el resultado de Def<ZX> con el metodo TAKE() de n
+  · y se REDUCE(:+)
+  · Def<ZX> se crea con una variable denom igual a uno punto cero
+  · se crea Enumerator.new con la variable 'p'
+  · se crea un loop do sin variable
+  · se usa YIELD a la variable 'p' de uno entre la variable denom
+  · se suma agregado 3.0 a denom
+  · 
+
+4)
+  · con una variable 'Denom' igual a 1.0
+  · y una variable 'Total' igual a cero
+  · hacer un loop tantas veces n sin variable
+  · total va a ser igual a total mas 1 entre la variable 'Denom'
+  · 'Denom' va a ser igual a 'Denom' mas 3
+  · por ultimo retorna interpolado usando FORMAT con dos parametros
+  · "%.2f" y total
+
+5)
+  · con operador ternario
+  · Retorna un string de cero con dos decimales si 'n' es igual a cero
+  · sino
+  · "%.2f" % de rando de 0 a n
+  · usando MAP con bloque de variable 'g'
+  · y operacion : 1.0 / (1 + [3 * g])
+  · se cierra con el metodo INJECT(:+)
+
+
+6)
+  · Retorna "%.2f" con % de rango de cero a n
+  · se le aplica el metodo INJECT a CERO con variable de bloque 'r' y 'CN'
+  · la operacion del bloque sera CN + 1.0 / [ 1 + (3* r)]
+  · 
+
+7)
+  · Retorna "%.2f" con % de rango de cero a n
+  · se le aplica el metodo SUM con variable de bloque 's'
+  · la operacion del bloque es 1.0 / 1 + (3 * 's')
+
+8)
+  · una variable 'SUMA' es igal a cero
+  · haer un loop tantas veces n con una variable 'a'
+  · 'SUMA' es igual a 'SUMA' mas 1.0 / [1 + (a - 1) + 2*a]
+  @ retorna 'SUMA' con formato de entero con dos decimales
+
+9)
+  · operador ternario
+  · si n es igual a cero regresa string de cero
+  · sino 
+  · rango de 1 a n con metodo MAP  y variable 'u'
+  · operacion del bloqeue es 1.0 / 1+(u-1) *3
+  · REDUCE(:+) todo
+
+10)
+  · Retornar string e cero si n es igual a cero
+  · retorna "%.2f" % de 
+  · rango de 0 a n con metodo INJECT a UNO con variable de bloque 'w' y 'CONT'
+  · operacion de bloque es: 'CONT' + 1.0 / 1 + (3 *w)
+*
