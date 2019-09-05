@@ -3,6 +3,8 @@
   Jack really likes his number five: the trick here is that you have to multiply 
   each number by 5 raised to the number of digits of each numbers, so, for example:
 
+  Este ejercicio es Mulltiplicar 'n' * 5  y el 5 esta elevado a la potencia de la cantidad de Numeros que tenga n
+
   multiply(3)==15
   multiply(10)==250
   multiply(200)==25000
@@ -12,8 +14,16 @@
 
 def multiply(n)
   #(5**(n.match(/\d+/)).length)
-  n*(5**(n.to_s).match(/\d+/).to_s.length)
+  #THIS IS THE RESPONSE=>  n*(5**(n.to_s).match(/\d+/).to_s.length)
   
+  
+  puts "#{(n.to_s)} Clase: #{(n.to_s).class} "
+  puts "#{(n.to_s).match(/\d+/)} Clase: #{(n.to_s).match(/\d+/).class}"
+  puts "#{(n.to_s).match(/\d+/).to_s} Clase: #{(n.to_s).match(/\d+/).to_s.class}"
+  puts "#{(n.to_s).match(/\d+/).to_s.length}"
+  puts "#{5**(n.to_s).match(/\d+/).to_s.length}"
+  puts "................."
+  n*(5**(n.abs.to_s.length))
 end
 
 
