@@ -9,8 +9,12 @@ It must return the display text as shown in the examples:
 =end
 
 def likes(names)
-  #your code here
+  return  "No one likes this" if names.length < 1 
+  return  "#{names[0]} likes this" if names.length == 1 
+  return  "#{names[0]} and #{names[1]} likes this" if names.length == 2 
+  return  "#{names[0]}, #{names[1]} and #{(names.length) -2} others like this" if names.length > 2
 end
+
 puts likes([])
 # => 'no one likes this'
 puts likes(['Peter'])
@@ -25,7 +29,16 @@ puts likes(['Alex', 'Jacob', 'Mark', 'Max'])
 
 =begin ############################################# OTHERS SOLUTIONS 
 2)
-
+def likes n
+  a,b,c,*d = n
+  l = "like this"
+  r = ["no one likes this", 
+        "#{a} likes this", 
+        "#{a} and #{b} #{l}", 
+        "#{a}, #{b} and #{c} #{l}", 
+        "#{a}, #{b} and #{d.size+1} others #{l}"]
+  r[n.size] || r[-1]
+end
 ----------------------------------------------------------------------
 3)
 
