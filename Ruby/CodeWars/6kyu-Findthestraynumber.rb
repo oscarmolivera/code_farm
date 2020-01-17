@@ -9,12 +9,13 @@ Examples
 =end
 
 def stray (numbers)
-  numbers.detect { |n| numbers.count(n).odd? }
+  #numbers.detect { |n| numbers.count(n).odd? }
+  dots = numbers.each { |v| result ^= v }
 end
 
 puts stray([1, 1, 2])
 puts stray([17, 17, 17, 17, 17, 1, 17])
-puts stray([1, 1, 1, 1, 8, 8, 8, 8, 1, 1, 9, 1, 1, 1, 1 ])
+puts stray([1, 1, 1, 1, 8, 8, 8, 1, 1, 9,9, 1, 1, 1, 1 ])
 # =>  2
 =begin ############################################# OTHERS SOLUTIONS 
 def stray(arr)

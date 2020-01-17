@@ -18,7 +18,7 @@ There will always be only one integer that appears an odd number of times.
 #end
 
 def find_it(seq)
-  seq.detect { |n| seq.count(n).odd? }
+  seq.group_by{|e| e}.keep_if{|_, e| e.length > 0}.each{|x,y| return x if y.length.odd?}
 end
 puts find_it([12,1,34,2])
 puts find_it([20,1,-1,2,20,-2,3,3,5,20,5,1,2,4,20,4,-1,-2,5])
@@ -29,7 +29,7 @@ puts find_it([20,1,1,2,2,3,3,5,5,4,20,4,5])
 # => 5
 puts find_it([10])
 # => 10
-puts find_it([1,1,1,1,1,1,10,1,1,1,1])
+puts find_it([1,1,1,1,10,10,1,1,1])
 # => 10
 
 
