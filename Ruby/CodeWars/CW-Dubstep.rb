@@ -29,5 +29,47 @@ song_decoder("WUBWEWUBAREWUBWUBTHEWUBCHAMPIONSWUBMYWUBFRIENDWUB")
 =end
 
 def song_decoder(song)
-  song.split('WUB').map(&:strip).select{|x| x != ''}.join(' ')
+  #song.split('WUB').map(&:strip).select{|x| x != ''}.join(' ')
+  song.split('WUB').select{|b| b!=''}.join(' ')
 end
+
+p song_decoder("AWUBBWUBC")
+# =>  "A B C","WUB should be replaced by 1 space");
+p song_decoder("AWUBWUBWUBBWUBWUBWUBC")
+# =>  "A B C","multiples WUB should be replaced by only 1 space");
+p song_decoder("WUBAWUBBWUBCWUB")
+# =>  "A B C", "heading or trailing spaces should be removed");
+
+
+
+=begin ############################################# OTHERS SOLUTIONS 
+2)
+
+----------------------------------------------------------------------
+3)
+
+----------------------------------------------------------------------
+4)
+
+----------------------------------------------------------------------
+5)
+
+----------------------------------------------------------------------
+6)
+
+----------------------------------------------------------------------
+7)
+
+----------------------------------------------------------------------
+8)
+
+----------------------------------------------------------------------
+9)
+
+----------------------------------------------------------------------
+10)
+
+=end
+
+=begin THRASH CAN ****************************************************
+=end

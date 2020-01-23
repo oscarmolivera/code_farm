@@ -8,8 +8,7 @@ The size will always be positive and will only use whole numbers.
 =end
 
 def stringy(size)
-  arr=[]
-  size > 0 ? (0..size).map { |k| arr << '10'}.join('')[0..size-1] : ''
+  (1..size).map{'10'}.join('').slice(0..size-1)
 end
 
 puts stringy(0)
@@ -63,6 +62,8 @@ def stringy(size)
 end
 ----------------------------------------------------------------------
 9)
+arr=[]
+  size > 0 ? (0..size).map { |k| arr << '10'}.join('')[0..size-1] : ''
 
 ----------------------------------------------------------------------
 10)

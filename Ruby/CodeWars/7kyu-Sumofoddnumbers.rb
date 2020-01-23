@@ -16,7 +16,10 @@ row_sum_odd_numbers(2); # 3 + 5 = 8
 
 def row_sum_odd_numbers(n)
 # (1..n).map{|k| ((n**2)-(n-1)) +(k*2)-2}.reduce(&:+)
-n**3
+#--------------------------------------------------------------------
+  primes_quantity= (1..n).reduce(:+)
+  primes_numbers = (0..primes_quantity-1).map{|m| m + m+1}
+  primes_numbers.slice(((primes_numbers.length)-n), n).reduce(:+)
 end
 puts row_sum_odd_numbers(1)
 # => 1

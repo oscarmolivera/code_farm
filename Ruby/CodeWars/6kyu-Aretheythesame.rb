@@ -39,8 +39,6 @@ If a or b are nil (or null or None), the problem doesn't make sense so return fa
 If a or b are empty then the result is self-evident.
 
 a or b are empty or not empty lists.
-
-
 =end
 
 def comp(array1, array2)  

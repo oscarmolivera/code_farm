@@ -17,12 +17,7 @@ def multiply(n)
   #THIS IS THE RESPONSE=>  n*(5**(n.to_s).match(/\d+/).to_s.length)
   
   
-  puts "#{(n.to_s)} Clase: #{(n.to_s).class} "
-  puts "#{(n.to_s).match(/\d+/)} Clase: #{(n.to_s).match(/\d+/).class}"
-  puts "#{(n.to_s).match(/\d+/).to_s} Clase: #{(n.to_s).match(/\d+/).to_s.class}"
-  puts "#{(n.to_s).match(/\d+/).to_s.length}"
-  puts "#{5**(n.to_s).match(/\d+/).to_s.length}"
-  puts "................."
+  n * (5 ** (n.to_s.gsub('-', '').size)) 
   n*(5**(n.abs.to_s.length))
 end
 

@@ -10,13 +10,7 @@ You can assume, for the purpose of this kata, that the supplied array will not b
 =end
 
 def find_smallest_int(arr)
-  small = arr[0]
-  arr.each do |x|
-    if x < small
-      small = x
-    end
-  end
-  small
+  arr.sort.take(1)[0]
 end
 
 puts find_smallest_int([78,56,232,12,8])
