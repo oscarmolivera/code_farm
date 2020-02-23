@@ -32,10 +32,23 @@ def number(bus_stops)
 end
 ----------------------------------------------------------------------
 4)
-
+def number(bus_stops)
+  passengers = 0
+  bus_stops.each do |a,b|
+    passengers += a - b
+  end
+  passengers
+end
 ----------------------------------------------------------------------
 5)
-
+def number(bus_stops)
+  riders = 0
+  bus_stops.each do |stop|
+    riders += stop[0]
+    riders -= stop[1]
+  end
+  return riders
+end
 ----------------------------------------------------------------------
 6)
 

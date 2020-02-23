@@ -2,7 +2,7 @@
   implements a methos that accepsts 3 integhers values a, b, c. The method should return true 
   if a triangle can be built with tha sides of the given length and false in any other caset.timestamps
   In this case, all triangles must have surface greater than 0t.timestamps
-
+  ff two sides add to less than the third, no triangle is possible. 
 =end
 
 def isTriangle(a,b,c)
