@@ -25,23 +25,25 @@ def up_array(arr)
 end
 
 def other_try(arr)
-  arr.join.succ.to_s.split("").map(&:to_i)
+  #arr.join.succ.to_s.split("").map(&:to_i)
   #(Integer(arr.join) + 1).to_s.split("").map(&:to_i)
+  arr.all? 
 end
 
-#p up_array([2, 3, 9])
+p up_array([2, 3, 9])
 # => [2, 4, 0]
 p up_array([4, 3, 2, 5])
 # => [4, 3, 2, 6]
-#p up_array([1, -9])
+p up_array([1, -9])
 # => nil
 p up_array([1, 2, 34])
-#p up_array([0, 1])
+p up_array([0, 1])
 # => nil
-#p up_array([])
+p up_array([])
 # => nil
 
 p other_try([4, 3, 2, 5])
+p other_try([])
 
 =begin ############################################# OTHERS SOLUTIONS 
 2)
