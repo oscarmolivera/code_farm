@@ -6,6 +6,9 @@ def test(data)
   
 end
 
+p test(data)
+# => 'test ouput'
+
 =begin ############################################# OTHERS SOLUTIONS 
 2)
 
