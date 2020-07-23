@@ -7,18 +7,51 @@ Given an array a of n integers and a number, d, perform left rotations on the ar
 updated array to be printed as a single line of space-separated integers.
 =end
 
-def rotLeft(a, d)
-  return a if d % a.length() == 0
-  mod = d % a.length()
-  a.map.with_index{|l, ix| a[ix+mod]}.map.with_index{|m, i| m.nil? ? a[i-mod-1]  : m}
+def rotLeft(arr, d)
+  cont = arr.length
+  rotar = d % con
+  arr.each.with_index do |el, index|
+    if lugar >= rotar
+      new_arr[index - rotar] = el
+    else
+      new_arr[cont - rotar] = el
+      cont += 1
+    end
+  end
 end
 
 p rotLeft([1,2,3,4,5,6,7,8,9], 22)
 =begin ############################################# OTHERS SOLUTIONS 
-2)
+2) Solucion explicada
+La idea es separar el arreglo en dos partes, la primara todos los elementos que 
+son igual o superior al numeros de espacios que se deben rotar
+[3,, 4, 5, 6, 7, 8, 9], y luego los que sean inferiores [1, 2]. Si el numero de 
+espacios a rotar es superior al numero de elementos que tiene un arreglo, se le 
+consigue el modulo para reducir ese numero.
+
+con = arr.length
+  new_arr = []
+  rotar = d % con
+  arr.each.with_index do |item, lugar|
+    if lugar >= rotar
+      new_arr[lugar - rotar] = item
+    else
+      new_arr[con - rotar] = item
+      con += 1
+    end
+  end
+  new_arr
+
+***refactorizar***
+  cont = arr.length
+  arr.map.with_index do|el, index| 
+  end
 
 ----------------------------------------------------------------------
-3)
+3)Solucion 
+  return arr if d % a.length == 0
+  mod = d % arr.length
+  arr.map.with_index{|l, ix| a[ix+mod]}.map.with_index{|m, i| m.nil? ? a[i-mod-1]  : m}
 
 ----------------------------------------------------------------------
 4)

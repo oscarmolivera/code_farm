@@ -9,6 +9,7 @@ The size will always be positive and will only use whole numbers.
 
 def stringy(size)
   (1..size).map{'10'}.join('').slice(0..size-1)
+  (1..times).map{ |cont|  cont.odd? ? '1' : '0'}.join
 end
 
 puts stringy(0)

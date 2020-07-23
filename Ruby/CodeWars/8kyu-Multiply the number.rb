@@ -12,13 +12,9 @@
   multiply(-3)==-15
 =end
 
-def multiply(n)
-  #(5**(n.match(/\d+/)).length)
-  #THIS IS THE RESPONSE=>  n*(5**(n.to_s).match(/\d+/).to_s.length)
+def multiply(num)
+  return 5 * num if num < 0
   
-  
-  n * (5 ** (n.to_s.gsub('-', '').size)) 
-  n*(5**(n.abs.to_s.length))
 end
 
 
@@ -59,5 +55,11 @@ def multiply(n)
   n*(5**(n.to_s).match(/\d+/).to_s.length)
 end
 
+  #(5**(n.match(/\d+/)).length)
+  #THIS IS THE RESPONSE=>  n*(5**(n.to_s).match(/\d+/).to_s.length)
+  
+  
+  n * (5 ** (n.to_s.gsub('-', '').size)) 
+  n*(5**(n.abs.to_s.length))
 =end
 

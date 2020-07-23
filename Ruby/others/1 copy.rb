@@ -2,16 +2,20 @@
 
 =end
 
-def fizzBuzz(n)
-  (1..n).each  do |num|
-    puts "FizzBuzz" if num % 3 == 0 && num % 5 == 0
-    puts "Fizz" if num % 3 == 0 && num % 5 != 0
-    puts "Buzz" if num % 3 != 0 && num % 5 == 0
-    puts "#{num}" if num % 3 != 0 && num % 5 != 0
+def num_mas_popular(array, len)
+  return array[0] if array.length == 1
+
+  first = array[0]
+  (1..len).each do |e|
+    
   end
 end
 
-fizzBuzz(15)
+puts num_mas_popular([34, 31, 34, 77, 82], 5)
+puts num_mas_popular([22, 101, 102, 101, 102, 525, 88], 7)
+puts num_mas_popular([66], 1)
+puts num_mas_popular([14, 14, 2342, 2342, 2342 ], 5)
+
 =begin ############################################# OTHERS SOLUTIONS 
 2)
 

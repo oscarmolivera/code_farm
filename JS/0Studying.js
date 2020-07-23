@@ -1,5 +1,5 @@
-"use strict"
-// https://regexr.com/
+
+// https://regex101.com/
 
 const r = {
   start: { x: 5, y: 6},
@@ -32,3 +32,19 @@ const half = (function() {
 })();
 console.log(stats); // should be object
 console.log(half(stats)); // should be 28.015
+
+let petString = "James has a pet cat.";
+let petRegex = /dog|cat|bird|fish/; 
+let result = petRegex.test(petString); // 
+console.log(result); // 
+
+
+let myString = "freecodecamp";
+let fccRegex = /freeCodeCamp/i; 
+let resultado = fccRegex.test(myString);
+console.log(`# => ${resultado}`);
+
+let extractStr = "Extract the word 'coding' from this string.";
+let codingRegex = /coding/; // Change this line
+let result2 = extractStr.match(codingRegex); // # => coding
+console.log(`#2 => ${result2}`);
