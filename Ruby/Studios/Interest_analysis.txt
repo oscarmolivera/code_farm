@@ -1,0 +1,30 @@
+#duplicate #map #hash #group_by #rand #unique
+How about the following:
+=======================
+things = [1, 2, 2, 3, 3, 3, 4]
+things.uniq.map{|t| [t,things.count(t)]}.to_h
+It sort of feels cleaner and more descriptive of what we're actually trying to do.
+
+I suspect it would also perform better with large collections than the ones that iterate over each value.
+
+Benchmark Performance test:
+
+a = (1...1000000).map { rand(100)}
+                       user     system      total        real
+inject                 7.670000   0.010000   7.680000 (  7.985289)
+array count            0.040000   0.000000   0.040000 (  0.036650)
+each_with_object       0.210000   0.000000   0.210000 (  0.214731)
+group_by               0.220000   0.000000   0.220000 (  0.218581)
+
+
+A different approach to the answers above, using Enumerable#group_by.
+======================================================================
+[1, 2, 2, 3, 3, 3, 4].group_by(&:itself).map { |k,v| [k, v.count] }.to_h
+# {1=>1, 2=>2, 3=>3, 4=>1}
+Breaking that into its different method calls:
+
+a = [1, 2, 2, 3, 3, 3, 4]
+a = a.group_by(&:itself) # {1=>[1], 2=>[2, 2], 3=>[3, 3, 3], 4=>[4]}
+a = a.map { |k,v| [k, v.count] } # [[1, 1], [2, 2], [3, 3], [4, 1]]
+a = a.to_h # {1=>1, 2=>2, 3=>3, 4=>1}
+
