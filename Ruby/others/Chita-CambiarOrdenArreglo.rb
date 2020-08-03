@@ -1,4 +1,3 @@
-#!/bin/bash/ruby
 =begin 
 Hola Oscar, gracias por tu respuesta. Podrías por favor responderme el siguiente ejercicio
 # Completar la siguiente funcion para que dado un array de números enteros rote sus posiciones a la izquierda.
@@ -31,7 +30,7 @@ class Array
 end
 arr = [1,2,3,4,5,6,7]
 h = Array.new
-puts h.rotate_left(arr, 5)
+puts h.rotate_left(arr, 9)
 
 =begin ############################################# OTHERS SOLUTIONS 
 2)

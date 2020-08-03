@@ -1,14 +1,14 @@
 =begin 
-Sami's spaceship crashed on Mars! She sends a series of SOS messages to Earth for help.
-Letters in some of the SOS messages are altered by cosmic radiation during transmission. 
-Given the signal received by Earth as a string, determine how many letters of Sami's SOS 
-have been changed by radiation.
+Sami's spaceship crashed on Mars! She sends a series of SOS messages to Earth
+for help. Letters in some of the SOS messages are altered by cosmic radiation
+during transmission. Given the signal received by Earth as a string, determine
+how many letters of Sami's SOS have been changed by radiation.
 
-For example, Earth receives SOSTOT. Sami's original message was SOSSOS. Two of the message 
-characters were changed in transit.
+For example, Earth receives SOSTOT. Sami's original message was SOSSOS. Two of
+the message characters were changed in transit.
 Function Description
-Complete the marsExploration function in the editor below. It should return an integer 
-representing the number of letters changed during transmission.
+Complete the marsExploration function in the editor below. It should return an
+integer representing the number of letters changed during transmission.
 marsExploration has the following parameter(s):
     s: the string as received on Earth
 Input Format
@@ -24,16 +24,16 @@ def marsExploration(s)
   sm = s.split('')
   counter = 0
   for i in (0..(s.length/3)-1) do
-    counter += 1 if sm[i*3] != 'S' 
-    counter +=1 if sm[(i*3)+1] != 'O' 
-    counter +=1 if sm[(i*3)+2] != 'S'
+    counter += 1 if sm[i*3] != 'S'
+    counter += 1 if sm[(i*3)+1] != 'O'
+    counter += 1 if sm[(i*3)+2] != 'S'
   end
  counter
 end
 
-#p marsExploration("SOSSOTS")
-#p marsExploration("SOSSOSSOS")
-#p marsExploration("SOScOccOcSOScOScOScOSSOScOScOScOScOScOS")
+p marsExploration("SOS SOT S")
+p marsExploration("SOS SOS SOS")
+p marsExploration("SOS cOc cOc SOS cOS cOS cOS SOS cOS cOS cOS cOS cOS")
 p marsExploration("SOSOOSOSOSOSOSSOSOSOSOSOSOS")
 
 

@@ -1,5 +1,6 @@
 
-There's no exact counterpart to Java's getClass() in JavaScript. Mostly that's due to JavaScript being a prototype-based language, as opposed to Java being a class-based one. Depending on what you need getClass() for, there are several options in JavaScript:
+There's no exact counterpart to Java's getClass() in JavaScript. Mostly that's due to JavaScript being a prototype-based language, 
+as opposed to Java being a class-based one. Depending on what you need getClass() for, there are several options in JavaScript:
 
 typeof
 instanceof

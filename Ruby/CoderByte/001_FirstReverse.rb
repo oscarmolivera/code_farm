@@ -11,7 +11,11 @@ Output:"edoC evoL I"
 =end
 
 def FirstReverse(str)
-  str.reverse        
+  #str.reverse        
+  for idx in (0...str.size/2)
+    str[idx], str[-(idx + 1)] = str[-(idx + 1)], str[idx]
+  end
+  str
 end
    
 # keep this function call here    
