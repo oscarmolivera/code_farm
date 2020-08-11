@@ -1,26 +1,30 @@
 =begin 
-A left rotation operation on an array shifts each of the array's elements 1 unit to the left.
-For example, if 2 left rotations are performed on array [1,2,3,4,5], then the array would become 
-[3,4,5,1,2].
+A left rotation operation on an array shifts each of the array's elements 1 unit
+to the left.
+For example, if 2 left rotations are performed on array [1,2,3,4,5], then the
+array would become [3,4,5,1,2].
 
-Given an array a of n integers and a number, d, perform left rotations on the array. Return the 
-updated array to be printed as a single line of space-separated integers.
+Given an array a of n integers and a number, d, perform left rotations on the
+array.Return the updated array to be printed as a single line of space-separated
+integers.
 =end
 
 def rotLeft(arr, d)
-  cont = arr.length
+  con = arr.length
+  new_arr = []
   rotar = d % con
-  arr.each.with_index do |el, index|
+  arr.each.with_index do |item, lugar|
     if lugar >= rotar
-      new_arr[index - rotar] = el
+      new_arr[lugar - rotar] = item
     else
-      new_arr[cont - rotar] = el
-      cont += 1
+      new_arr[con - rotar] = item
+      con += 1
     end
   end
+  new_arr
 end
 
-p rotLeft([1,2,3,4,5,6,7,8,9], 22)
+p rotLeft([1,2,3,4,5,6,7,8,9], 1)
 =begin ############################################# OTHERS SOLUTIONS 
 2) Solucion explicada
 La idea es separar el arreglo en dos partes, la primara todos los elementos que 
