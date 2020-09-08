@@ -23,7 +23,7 @@ puts SimpleaAdding(140)
 def SimpleAdding(num)
     added = 0
     (1..num).each do |i|
-       added += i 
+      added += i 
     end
     added
 end

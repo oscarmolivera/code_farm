@@ -34,5 +34,5 @@ def LongestWord(sen)
  end
 
  def LongestWord(sen)
-  sen.gsub(/[^a-zA-Z0-9" "]/,"").split(" ").sort_by(&:length).last     
+  sen.gsub(/[^a-zA-Z0-9" "]/,"").split(" ").sort_by(&:length).last
 end

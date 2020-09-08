@@ -3,9 +3,10 @@
 =end
 
 def test(data)
-  
+ 2 + 0.7
 end
 
+p test('data')
 =begin ############################################# OTHERS SOLUTIONS 
 2)
 
