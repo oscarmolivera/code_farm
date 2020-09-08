@@ -1,6 +1,9 @@
 =begin
 Challenge
-Have the function FirstReverse(str) take the str parameter being passed and return the string in reversed order. For example: if the input string is "Hello World and Coders" then your program should return the string sredoC dna dlroW olleH.
+Have the function FirstReverse(str) take the str parameter being passed and
+return the string in reversed order. For example: if the input string is "Hello
+World and Coders" then your program should return the string:
+"sredoC dna dlroW olleH".
 
 Sample Test Cases
 Input:"coderbyte"
@@ -10,8 +13,7 @@ Input:"I Love Code"
 Output:"edoC evoL I"
 =end
 
-def FirstReverse(str)
-  #str.reverse        
+def FirstReverse(str)     
   for idx in (0...str.size/2)
     str[idx], str[-(idx + 1)] = str[-(idx + 1)], str[idx]
   end
