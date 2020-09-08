@@ -1,0 +1,90 @@
+1) 2) 3) 4) 5) 6) 7) 8) 9) 
+
+1) First reverse
+Have the function FirstReverse(str) take the str parameter being passed and return the string in reversed order. 
+For example: if the input string is "Hello World and Coders" then your program should return the string:
+"sredoC dna dlroW olleH".
+Sample Test Cases {
+  Input:"coderbyte"
+  Output:"etybredoc"
+
+  Input:"I Love Code"
+  Output:"edoC evoL I"
+}
+[
+  * Inicializar un arreglo vacio
+  * Crear un nuevo arreglo de letras separas de el string usando CHARS
+  * Iterar por el arreglo creado con chars y en cada letra aplicar unshift al arreglo vacio
+  * Return sobre el nuevo arreglo. 
+]
+· descomponer 
+---------------------
+2)
+---------------------
+3)Longest Word
+Have the function LongestWord(sen) take the sen parameter being passed and return the largest word in the string. 
+If there are two or more words that are the same length, return the first word from the string with that length. 
+Ignore punctuation and assume sen will not be empty.
+Sample Test Cases{
+  Input:"fun&!! time"
+  Output:time
+
+  Input:"I love dogs"
+  Output:love
+}
+---------------------
+4)Letter changes
+Have the function LetterChanges(str) take the str parameter being passed and modify it using the following algorithm. 
+Replace every letter in the string with the letter following it in the alphabet (ie. c becomes d, z becomes a). 
+Then capitalize every vowel in this new string (a, e, i, o, u) and finally return this modified string.
+Sample Test Cases{
+  Input:"hello*3"
+  Output:"Ifmmp*3"
+
+  Input:"fun times!"
+  Output:"gvO Ujnft!"
+}
+---------------------
+5)Simple adding
+Have the function SimpleAdding(num) add up all the numbers from 1 to num. For example: if the input is 4 then your 
+program should return 10 because 1 + 2 + 3 + 4 = 10. For the test cases, the parameter num will be any number from 
+1 to 1000.
+Sample Test Cases{
+  Input:12
+  Output:78
+
+  Input:140
+  Output:9870
+}
+---------------------
+6)Letter capitalize
+Have the function LetterCapitalize(str) take the str parameter being passed and capitalize the first letter of each word. 
+Words will be separated by only one space.
+Sample Test Cases{
+  Input:"hello world"
+  Output:"Hello World"
+
+  Input:"i ran there"
+  Output:"I Ran There"
+}
+---------------------
+7)Simple symbols
+Have the function SimpleSymbols(str) take the str parameter being passed and determine if it is an acceptable sequence 
+by either returning the string true or false. The str parameter will be composed of + and = symbols with several letters 
+between them (ie. ++d+===+c++==a) and for the string to be true each letter must be surrounded by a + symbol. So the string 
+to the left would be false. The string will not be empty and will have at least one letter.
+Sample Test Cases{
+  Input:"+d+=3=+s+"
+  Output:true
+
+  Input:"f++d+"
+  Output:false
+}
+---------------------
+8)
+---------------------        
+9)
+---------------------
+10) 
+---------------------
+
