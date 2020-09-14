@@ -16,24 +16,12 @@ Output:false
 =end
 
 def SimpleSymbols(str)
-  #str.sub(/\d*$/) { |x| x.empty? ? 1 : x.next }
-  #m = (str.scan(/(\+[a-z]\+)/)).to_a
-  #m = (str.scan(/[(\+[a-z]\+)]/)).to_a
-  #m = (str.scan(/[[\+{1}][a-z{1}][\+]]/)).to_a.join('')
-  #l = (str.scan(/([a-z])/)).to_a
-  #r = (m.to_s)
-  #z = r.split('+')
-  #z.length == l.length ? true : false
-  #puts "Str = #{str} | Match: #{z.length} // Length: #{l.length} | #{z.length == l.length ? true : false}"
-  #puts "Z: #{z} // L: #{l}"
-  t = /([\+][a-z{1}])/
-  m = str.scan(t)
-  if m.match(/[a-z](\+{1})/)
-    puts "True"
-  else
-    puts "False"
+  for i in (0...str.size) do 
+    if str[i] =~ /[a-zA-Z]/
+        return false if str[i - 1] != '+' or str[i + 1] != '+' or i == 0 #added this because if i == 0, then i - 1 == -1
+    end
   end
-  #puts "------------------------------"
+  true
 end
    
 # keep this function call here    
@@ -143,5 +131,22 @@ def SimpleSymbols(str)
   return true      
 end
 ---------------------------------------------------
-
+def SimpleSymbols(str)
+  arr = []
+  str.chars.each.with_index do |chr, idx|
+    return 'false' if idx == 0 && chr.match(/[a-z]/)
+    if chr.match(/[a-z]/)
+      if str[idx-1] == '+'
+        if str[idx+1] == '+'
+          arr << 'true'
+        else
+          arr << 'false'
+        end
+      else
+        arr << 'false'
+      end      
+    end
+  end
+  arr.count('false') > 0 ? 'false' : 'true'
+en
 =end

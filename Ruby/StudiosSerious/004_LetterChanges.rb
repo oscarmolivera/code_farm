@@ -12,15 +12,7 @@ Input:"fun times!"
 Output:"gvO Ujnft!"
 =end
 def LetterChanges(str)
-  newWord = str.each_char.map do |ch|
-    if ch.match(/[a-zA-Z]/)
-      letter = (ch.ord+1).chr
-      letter.match(/[aeiou]/) ? letter.upcase : letter.downcase
-    else
-      ch
-    end
-  end
-  newWord.join('')
+  str.chars.map{|ltr| ltr.match(/\w+/) ? ltr.next : ltr}.join('').gsub(/[aeiou+]/){ |vow| vow.capitalize}
 end
 
 
@@ -96,4 +88,14 @@ def LetterChanges(str)
   end
   newWord.join('')
 end
+--------------------------------------------------------------
+  newWord = str.each_char.map do |ch|
+    if ch.match(/[a-zA-Z]/)
+      letter = (ch.ord+1).chr
+      letter.match(/[aeiou]/) ? letter.upcase : letter.downcase
+    else
+      ch
+    end
+  end
+  newWord.join('')
 =end
