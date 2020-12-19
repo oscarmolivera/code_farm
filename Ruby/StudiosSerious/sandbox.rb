@@ -1,17 +1,31 @@
-
-
-def longest_word(sen)
-  (0..(sen.length/2)).each do |wo|
-    # str[idx], str[-(idx + 1)] = str[-(idx + 1)], str[idx]
-    sen[-(wo + 1)] = sen[wo]
-    sen[wo] = sen[-(wo + 1)]
-  end
-  sen
+def letter_capitalize(str)
+  str.split(' ').map {|word| word.capitalize}.join
 end
 
-p longest_word('Ignore punctuation and assume sen will not be empty.')
-# => 'longest_word ouput'
-p longest_word('fun&!! time')
-# => time
-p longest_word('I love dogs')
-# => love
+
+p letter_capitalize('miranda allroa')
+
+
+def simple_symbols(str)
+  return 'false3' if str[0].match(/[a-zA-Z]/)
+  
+  str.chars.each.with_index do |char, idx|
+    if char.match(/[a-zA-Z]/)
+      if str[idx-1] == '+'
+        if str[idx+1] == '+'
+          return 'true'
+        else
+          return 'false1'
+        end
+      else
+        return 'false2'
+      end
+    end
+  end
+end
+
+p simple_symbols("+d+=3=+s+")
+# => true
+
+p simple_symbols("+f++d")
+# => false
