@@ -8,13 +8,13 @@ ARGV.clear
 STDOUT.flush
 
 class Circle
-  
+
   def initialize(size)
     @radius_size = size.to_i
   end
 
   def valid?
-   return true  if @radius_size.to_i > 0
+    return true  if @radius_size.to_i > 0
   end
 
   def perimeter
@@ -39,4 +39,3 @@ else
   puts "\n"
   puts "#=> Try again! (Please type a valid number to calculate it's diameter and per)"
 end
-
