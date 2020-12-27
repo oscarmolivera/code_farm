@@ -31,8 +31,8 @@ end
 p up_array([2, 3, 9]) # => [2, 4, 0]
 p up_array([4, 3, 2, 5]) # => [4, 3, 2, 6]
 p up_array([1, -9]) # => nil
-p up_array([1, 2, 34]) 
-p up_array([0, 1]) # => nil
+p up_array([1, 2, 34]) # => nil
+p up_array([0, 1]) # => [0, 2]
 p up_array([]) # => nil
 
 p other_try([4, 3, 2, 5])
@@ -50,7 +50,10 @@ def up_array(arr)
   arr.join.next.chars.map(&:to_i)
 end
 ----------------------------------------------------------------------
-4)
+4) !Mio!
+def up_array(array)
+  array.join().size < 1 || array.join().size != array.size ? nil :  array.join().succ.chars.map{ |char| char.to_i}
+end
 
 ----------------------------------------------------------------------
 5)
