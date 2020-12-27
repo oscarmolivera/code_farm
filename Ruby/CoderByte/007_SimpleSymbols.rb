@@ -103,7 +103,6 @@ def SimpleSymbols(str)
       str.shift
     end
     res.length == count
-         
 end
 ---------------------------------------------------
 def SimpleSymbols(str)
