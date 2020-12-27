@@ -28,17 +28,12 @@ def other_try(arr)
   arr.all? 
 end
 
-p up_array([2, 3, 9])
-# => [2, 4, 0]
-p up_array([4, 3, 2, 5])
-# => [4, 3, 2, 6]
-p up_array([1, -9])
-# => nil
-p up_array([1, 2, 34])
-p up_array([0, 1])
-# => nil
-p up_array([])
-# => nil
+p up_array([2, 3, 9]) # => [2, 4, 0]
+p up_array([4, 3, 2, 5]) # => [4, 3, 2, 6]
+p up_array([1, -9]) # => nil
+p up_array([1, 2, 34]) 
+p up_array([0, 1]) # => nil
+p up_array([]) # => nil
 
 p other_try([4, 3, 2, 5])
 p other_try([])
