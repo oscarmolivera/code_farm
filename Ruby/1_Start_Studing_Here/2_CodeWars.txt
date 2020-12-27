@@ -24,7 +24,20 @@ Sample Test Cases {
 ]
 
 ---------------------
-2)
+2)Vowel count
+Return the number (count) of vowels in the given string. We will consider a, e, i, o, and
+u as vowels for this Kata.
+The input string will only consist of lower case letters and/or spaces.
+
+Sample Test Cases {
+  p vowel_count('usando') # => 3
+  p vowel_count('ele ent o') # => 4
+  p vowel_count(' rmpdl zdr') # => 0
+}
+[
+  * usando el metodo .SCAN crear un arreglo a partir de el regexp /[aeiou]/
+  * .COUNT al arreglo
+]
 ---------------------        
 3)
 ---------------------
