@@ -12,7 +12,7 @@ Output:9870
 =end
 
 def SimpleaAdding(n)
-  suma = (1..n).reduce(:+)
+  (1..n).reduce(:+)
 end
 
 puts SimpleaAdding(8)
@@ -31,4 +31,3 @@ end
 def SimpleAdding(num)
     (1..num).inject(:+)
 end
-   
