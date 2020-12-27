@@ -1,19 +1,18 @@
 1) 2) 3) 4) 5) 6) 7) 8) 9) 
 
-1) <name-of-problem>
-Explantion ...... ..... ....... ...... ...... ..... ....... ...... ...... ..... ....... ...... 
-...... ..... ....... ...... ...... ..... ....... ...... ...... ..... ....... ...... ...... ...
-.... ...... ...... ..... ........... ...... ...... ..... ....... ...... ...... ..... ....... .
-...... ..... ....... ...... ...... ..... ....... ...... ...... ..... ....... ...... ...... ...
-...... ..... ....... ...... ...... ....... ...... ...... ..... ....... ...... ...... ..... ...
-...... ........... ....... ........ ...... ..... ....... ....... ...... ..... ....... ...... .
-...... ..... ..... ...... ...... ..... ....... ...... ...... ..... ....... ......  .......... 
+1) Plus One Array
+Given an array of integers of any length, return an array that has 1 added to the value
+represented by the array.
+The array can't be empty, only non-negative, single digit integers are allowed.
+
+Return nil (or your language's equivalent) for invalid inputs.
 
 Sample Test Cases {
-  
+  plus_one_array([2, 3, 9]) # => [2, 4, 0]
+  plus_one_array([4, 3, 2, 5]) # => [4, 3, 2, 6]
 }
 [
-  * work
+  * convertir todos los elementos del arreglo en un numero entero
 ]
 
 ---------------------
