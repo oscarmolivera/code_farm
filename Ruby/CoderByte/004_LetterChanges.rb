@@ -37,11 +37,11 @@ def LetterChanges(str)
   #1. convert letters using gsub
   #2. capitalize every vowel
   converted = str.gsub(/[a-zA-Z]/) do |i|
-     if i == 'z' or i == 'Z'
-         'a'
-     else
-         (i.ord + 1).chr
-     end
+    if i == 'z' or i == 'Z'
+      'a'
+    else
+      (i.ord + 1).chr
+    end
   end
   converted.tr('aeiou', 'AEIOU')
 end
@@ -62,7 +62,6 @@ def LetterChanges(str)
       end
       end.join('')
   return str 
-         
 end
 --------------------------------------------------
 def LetterChanges(str)
