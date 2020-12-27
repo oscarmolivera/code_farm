@@ -1,6 +1,6 @@
 1) 2) 3) 4) 5) 6) 7) 8) 9) 
 
-1) Plus One Array
+1) Up Array
 Given an array of integers of any length, return an array that has 1 added to the value
 represented by the array.
 The array can't be empty, only non-negative, single digit integers are allowed.
@@ -8,11 +8,19 @@ The array can't be empty, only non-negative, single digit integers are allowed.
 Return nil (or your language's equivalent) for invalid inputs.
 
 Sample Test Cases {
-  plus_one_array([2, 3, 9]) # => [2, 4, 0]
-  plus_one_array([4, 3, 2, 5]) # => [4, 3, 2, 6]
+  p up_array([2, 3, 9]) # => [2, 4, 0]
+  p up_array([4, 3, 2, 5]) # => [4, 3, 2, 6]
+  p up_array([1, -9]) # => nil
+  p up_array([1, 2, 34]) # => nil
+  p up_array([0, 1]) # =>  [0, 2]
+  p up_array([]) # => nil
 }
 [
-  * convertir todos los elementos del arreglo en un numero entero
+  * convertir todos los elementos del arreglo en un numero sting (.JOIN)
+  * sumarle uno mas con el metodo .SUCC
+  * volverlo a convertir en un arreglo con .CHARS
+  * iterar con .MAP para convertir cada numero en un entero otra vez
+  * comparar el tamaño de l arreglo contra el string creado con .JOIN si son diferentes retornar nil
 ]
 
 ---------------------
