@@ -18,34 +18,21 @@ def increment_string(input)
   input.gsub(num, num.next)
 end
 
-puts increment_string("foo")
-# => foo1
-puts increment_string("foobar001")
-# => foobar002
-puts increment_string("foobar1")
-# => foobar2
-puts increment_string("foobar00")
-# => foobar01
-puts increment_string("foobar99")
-# => foobar100
-puts increment_string("f00bar")
-# => f00bar1
-puts increment_string("f00b4r")
-# => f00b4r1
-puts increment_string("foobar000")
-# => foobar001
-puts increment_string("foobar999")
-# => foobar1000
-puts increment_string("foobar0999")
-# => foobar01000
-puts increment_string("foobar001")
-# => foobar002
-puts increment_string("foobar1")
-# => foobar2
-puts increment_string("f0")
-# => f1
-puts increment_string("fB")
-# => fB1
+p increment_string("foo") # => foo1
+p increment_string("foobar001") # => foobar002
+p increment_string("foobar1") # => foobar2
+p increment_string("foobar00") # => foobar01
+p increment_string("foobar99") # => foobar100
+p increment_string("f00bar") # => f00bar1
+p increment_string("f00b4r") # => f00b4r1
+p increment_string("foobar000") # => foobar001
+p increment_string("foobar999") # => foobar1000
+p increment_string("foobar0999") # => foobar01000
+p increment_string("foobar001") # => foobar002
+p increment_string("foobar1") # => foobar2
+p increment_string("f0") # => f1
+p increment_string("fB") # => fB1
+
 # CLEVER SOLUTIONS
 =begin
 #########################################################################################
@@ -75,21 +62,26 @@ end
 -------------------------------------------------------------------
 5)
   def increment_string(input)
-	  return input + '1' if input =~ /\D$/ || input.empty?
-	  input.sub(/\d+$/) { |n| (n.to_i + 1).to_s.rjust(n.length, '0')}
+	return input + '1' if input =~ /\D$/ || input.empty?
+	input.sub(/\d+$/) { |n| (n.to_i + 1).to_s.rjust(n.length, '0')}
   end
 -------------------------------------------------------------------
 6)
   def increment_string(strng)
-	  num_str = strng.scan(/\d+$/).first.to_s
-	  return strng.gsub(num_str, num_str.next) if strng.match(/\d$/)
-	  return strng + "1" if num_str.empty?
+	num_str = strng.scan(/\d+$/).first.to_s
+	return strng.gsub(num_str, num_str.next) if strng.match(/\d$/)
+	return strng + "1" if num_str.empty?
   end  
 -------------------------------------------------------------------
 7)
   def increment_string(input)
-	  input.sub(/\d*$/) { |x| x.empty? ? 1 : x.next }
+	input.sub(/\d*$/) { |x| x.empty? ? 1 : x.next }
   end
+------------------------------------------------------------------
+8)
+def increment_string(str)
+  str.scan(/\d+$/).any? ? "#{str.gsub(/\d+$/, '')}#{str.scan(/\d+$/).to_s.succ.delete('["\]')}" : "#{str.gsub(/\d+$/, '')}1"
+end
 =end
 
 ##THRASH CAN
