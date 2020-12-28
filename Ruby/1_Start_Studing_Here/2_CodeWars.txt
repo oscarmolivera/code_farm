@@ -65,6 +65,33 @@ Sample Test Cases {
 ]
 ---------------------
 4) 
+String incrementer  
+Your job is to write a function which increments a string, to create a new string. If the string already
+ends with a number, the number should be incremented by 1. If the string does not end with a number. the 
+number 1 should be appended to the new string.
+Attention: If the number has leading zeros the amount of digits should be considered.
+Sample Test Case{
+p increment_string("foo") # => foo1
+p increment_string("foobar001") # => foobar002
+p increment_string("foobar1") # => foobar2
+p increment_string("foobar00") # => foobar01
+p increment_string("foobar99") # => foobar100
+p increment_string("f00bar") # => f00bar1
+p increment_string("f00b4r") # => f00b4r1
+p increment_string("foobar000") # => foobar001
+p increment_string("foobar999") # => foobar1000
+p increment_string("foobar0999") # => foobar01000
+p increment_string("foobar001") # => foobar002
+p increment_string("foobar1") # => foobar2
+p increment_string("f0") # => f1
+p increment_string("fB") # => fB1
+}
+[
+  * se toma el string argumento y se descompone en dos secciones la "palabra" y el "numero"
+  * se usa el metodo .SUB porque se va a substraer la porcion del numero y se reemplazara con otro
+  * si la porcion de sub es vacia, .ANY? entonces simplemente se agrega 1 al final del string
+  * si no es nula, se usa el metodo .SUCC o .NEXT para que cree el siguiente numero.
+]
 ---------------------
 5)
 ---------------------        
