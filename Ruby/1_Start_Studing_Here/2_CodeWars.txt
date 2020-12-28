@@ -39,7 +39,30 @@ Sample Test Cases {
   * .COUNT al arreglo
 ]
 ---------------------        
-3)
+3)Series Sum.
+Your task is to write a function which returns the sum of following series upto nth term(parameter).
+Series: 1 + 1/4 + 1/7 + 1/10 + 1/13 + 1/16 +...
+
+Rules:
+    You need to round the answer to 2 decimal places and return it as String.
+    If the given value is 0 then it should return 0.00
+    You will only be given Natural Numbers as arguments.
+
+Sample Test Cases {
+  p series_sum(0)  # => "0.00"
+  p series_sum(1)  # => "1.00"
+  p series_sum(2)  # => "1.25"
+  p series_sum(5)  # => "1.57"
+  p series_sum(10) # => "1.81"
+}
+[
+  * Hay varias formas de enfrentar este problema
+  * Primero hay que retornar '0.00' si el numero es menor a 1
+  * luego se crea un rango de 1 hasta el numero recibido en el argumento
+  * por cada interaccion usando .MAP se toma el numero y se divide por la formula 1.0/(n + (2 *(n-1)))
+  * se reduce todo el arreglo creado sumando todos sus elementos con .reduce
+  * por ultimo se retorna el string de esa reduccion usando sprintf('%.2f', numero)
+]
 ---------------------
 4) 
 ---------------------
