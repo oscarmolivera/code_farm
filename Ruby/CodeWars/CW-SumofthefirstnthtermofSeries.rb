@@ -16,20 +16,27 @@ SeriesSum(2) => 1 + 1/4 = "1.25"
 SeriesSum(5) => 1 + 1/4 + 1/7 + 1/10 + 1/13 = "1.57"
 NOTE: In PHP the function is called series_sum().
 =end
-
 def series_sum(n)
-    # Happy Coding ^_^
     sprintf('%.2f', series(n))
 end
   
 def series(n)
     return 0 if n ==0
-    n == 1  ?  a = 1.0 : a = series(n-1)+(1/(1+(3.0 * (n-1))))
+    n == 1  ?  1.0 : series(n-1)+(1/(1+(3.0 * (n-1))))
 end
+
+  p series_sum(0) # => 1 = "0.00"
+  p series_sum(1) # => 1 = "1.00"
+  p series_sum(2) # => 1 + 1/4 = "1.25"
+  p series_sum(3) # => 1 + 1/4 + 1/7 = "1.39"
+  p series_sum(4) # => 1 + 1/4 + 1/7 + 1/10= "1.49"
+  p series_sum(5) # => 1 + 1/4 + 1/7 + 1/10 + 1/13 = "1.57"
+  p series_sum(6) # => 1 + 1/4 + 1/7 + 1/10 + 1/13 + 1/16 = "1.63"
+  p series_sum(10) #=> 1 + 1/4 + 1/7 + 1/10 + 1/13 + 1/16 + 1/19 + 1/22 + 1/25 + 1/28 = "1.81"
 
 =begin ############################################# OTHERS SOLUTIONS 
 1)
-   return "0.00" if len < 1
+  return "0.00" if len < 1
     #'%.2f' %  (1..len).map{|g| g < 2 ? 1 : 1.0/(g + (2 * (g-1)))}.reduce(:+)
 ----------------------------------------------------------------------
 2)
@@ -77,8 +84,9 @@ def series_sum(n)
 end
 ----------------------------------------------------------------------
 7)
-def series_sum(n)
-  '%.2f' % (0...n).sum { |i| 1.0 / (i * 3 + 1) }
+def series_sum(num)
+  return '0.00' if num.zero?
+  sprintf('%.2f', (1..num).map{ |n| 1.0 / (n+(2*(n-1))) }.reduce(&:+))
 end
 ----------------------------------------------------------------------
 8)
@@ -88,7 +96,7 @@ def series_sum(n)
     sum += 1.0/((i+1) + i*2)
     puts sum
   end
- "%.2f" % sum
+"%.2f" % sum
 end
 ----------------------------------------------------------------------
 9)
@@ -100,5 +108,15 @@ end
 def series_sum(n)
   return "0.00" if n.zero?
   "%.2f" % (1...n).inject(1) { |sum, m| sum + 1.0 / (3 * m + 1) }
-end+
+end
+----------------------------------------------------------------------
+11)MIO!
+def series_sum(num)
+  return '0.00' if num < 1
+  return '1.00' if num == 1
+  arr = [1]
+  (1..num-1).each { arr << 1/((item + 3.0)+(2* (item-1))) }
+  sprintf('%.2f', arr.reduce(&:+))
+end
+
 =end
