@@ -14,7 +14,7 @@ The second value in the first integer array is 0, since the bus is empty in the
 first bus stop.
 =end
 
-def number(bus_stops)
+def people_remain(bus_stops)
   bus_stops.map{|ins, out| ins - out}.reduce(:+)
 end
 
@@ -22,17 +22,17 @@ end
 
 =begin ############################################# OTHERS SOLUTIONS 
 2)
-def number(bus_stops)
+def people_remain(bus_stops)
   bus_stops.inject(0) { |pax, (pax_on, pax_off)| pax + pax_on - pax_off }
 end
 ----------------------------------------------------------------------
 3)
-def number(bus_stops)
+def people_remain(bus_stops)
   bus_stops.reduce(0) { |k, (on, off)| k + on - off }
 end
 ----------------------------------------------------------------------
 4)
-def number(bus_stops)
+def people_remain(bus_stops)
   passengers = 0
   bus_stops.each do |a,b|
     passengers += a - b
@@ -41,7 +41,7 @@ def number(bus_stops)
 end
 ----------------------------------------------------------------------
 5)
-def number(bus_stops)
+def people_remain(bus_stops)
   riders = 0
   bus_stops.each do |stop|
     riders += stop[0]
@@ -50,7 +50,10 @@ def number(bus_stops)
   return riders
 end
 ----------------------------------------------------------------------
-6)
+6)MIO!!!
+def people_remain(bus_stops)
+  bus_stops.map{ |item| item[0]-item[1]}.reduce(&:+)
+end
 
 ----------------------------------------------------------------------
 7)
