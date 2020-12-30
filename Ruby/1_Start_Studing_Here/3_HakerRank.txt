@@ -1,23 +1,47 @@
-1) 2) 3) 4) 5) 6) 7) 8) 9) 
+1)Repeated String
+here is a string, 'S', of lowercase English letters that is repeated infinitely many times. Given an integer, 'n',
+find and print the number of letter a's in the first 'n' letters of the infinite string.
+Example
+s = 'abcac'
+n = 10
+The substring we consider is 'abcacabcac', the first 10 characters of the infinite string. There are 4occurrences 
+of a in the substring.
 
-1) <name-of-problem>
-Explantion ...... ..... ....... ...... ...... ..... ....... ...... ...... ..... ....... ...... 
-...... ..... ....... ...... ...... ..... ....... ...... ...... ..... ....... ...... ...... ...
-.... ...... ...... ..... ........... ...... ...... ..... ....... ...... ...... ..... ....... .
-...... ..... ....... ...... ...... ..... ....... ...... ...... ..... ....... ...... ...... ...
-...... ..... ....... ...... ...... ....... ...... ...... ..... ....... ...... ...... ..... ...
-...... ........... ....... ........ ...... ..... ....... ....... ...... ..... ....... ...... .
-...... ..... ..... ...... ...... ..... ....... ...... ...... ..... ....... ......  .......... 
+Function Description
+Complete the repeatedString function in the editor below. repeatedString has the following parameter(s):
 
-Sample Test Cases {
-  
-}
-[
-  * work
-]
+    * s: a string to repeat
+    * n: the number of characters to consider
 
----------------------
-2)
+Returns
+
+    * int: the frequency of a in the substring
+
+Input Format
+The first line contains a single string, 's'.
+The second line contains an integer, 'n'.
+
+Constraints
+* 1 <= |s| <= 100
+* 1 <= |n| <= 10^12
+* For 25% of the cases n <= 10^6
+
+Samples
+Input 0		  Output 0
+```					```
+aba 				7
+10
+```
+Explanation 0
+The first n = 10 letters of the infinite string are abaabaabaa. Because there are 7 a's, we return .
+
+Input 1		    Output 1
+```					  ```
+a 				    1000000000000
+1000000000000
+```
+Explanation 1
+Because all of the first n = 1000000000000 letters of the infinite string are a, we return 1000000000000. 
 ---------------------        
 3)
 ---------------------
@@ -34,4 +58,27 @@ Sample Test Cases {
 9)
 ---------------------
 10) 
+---------------------
+
+1) 2) 3) 4) 5) 6) 7) 8) 9) 
+
+1) New Year Chaos
+t is New Year's Day and people are in line for the Wonderland rollercoaster ride. Each person wears 
+a sticker indicating their initial position in the queue. Initial positions increment by 1 from 1 at 
+the front of the line to n at the back. Any person in the queue can bribe the person directly in front 
+of them to swap positions. If two people swap positions, they still wear the same sticker denoting 
+their original places in line. One person can bribe at most two others. For example, if and bribes , 
+the queue will look like this:
+
+.
+
+Fascinated by this chaotic queue, you decide you must know the minimum number of bribes that took place to get the queue into its current state. If anyone has bribed more than two people, the line is too chaotic to compute the answer.
+
+Sample Test Cases {
+  
+}
+[
+  * work
+]
+
 ---------------------
