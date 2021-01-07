@@ -18,7 +18,17 @@ Fahrenheit and Kelvin scale.
 p convert_temp(0, input_scale: 'celsius', output_scale: 'kelvin') #=> 273.15 
 p convert_temp(0, input_scale: 'celsius', output_scale: 'fahrenheit') #=> 32.0
 ---------------------
-4) 
+3)Practice > Ruby > Methods > BLOCKS
+You are given a partially complete code. Your task is to fill in the blanks (_______).
+The factorial method computes: n! { x x x }. 
+  def factorial
+      #_______________________
+  end
+
+  n = gets.to_i
+  factorial do 
+      puts #_______________________
+  end
 ---------------------
 5)
 ---------------------        
