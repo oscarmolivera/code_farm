@@ -1,0 +1,49 @@
+1)Ruby - Methods - Variable Arguments
+ Write a method named full_name that generates the full names of people given their first name, 
+ followed by some variable number of middle names, followed by their last name.
+ Sample Input 0
+
+  p full_name('Harsha', 'Bhogle') # => "Harsha Bhogle"
+  p full_name('Pradeep', 'Suresh', 'Satyanarayana') # => "Pradeep Suresh Satayanarayana"
+  p full_name('Horc', 'G.', 'M.', 'Moon') # => "Horc G. M. Moon"
+
+---------------------        
+3)
+---------------------
+4) 
+---------------------
+5)
+---------------------        
+6)
+---------------------
+7) 
+---------------------
+8)
+---------------------        
+9)
+---------------------
+10) 
+---------------------
+
+1) 2) 3) 4) 5) 6) 7) 8) 9) 
+
+1) New Year Chaos
+t is New Year's Day and people are in line for the Wonderland rollercoaster ride. Each person wears 
+a sticker indicating their initial position in the queue. Initial positions increment by 1 from 1 at 
+the front of the line to n at the back. Any person in the queue can bribe the person directly in front 
+of them to swap positions. If two people swap positions, they still wear the same sticker denoting 
+their original places in line. One person can bribe at most two others. For example, if and bribes , 
+the queue will look like this:
+
+.
+
+Fascinated by this chaotic queue, you decide you must know the minimum number of bribes that took place to get the queue into its current state. If anyone has bribed more than two people, the line is too chaotic to compute the answer.
+
+Sample Test Cases {
+  
+}
+[
+  * work
+]
+
+---------------------
