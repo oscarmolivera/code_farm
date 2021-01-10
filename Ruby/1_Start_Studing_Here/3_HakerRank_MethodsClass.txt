@@ -30,7 +30,25 @@ The factorial method computes: n! { x x x }.
       puts #_______________________
   end
 ---------------------
-5)
+5) Ruby - Methods - Procs
+You are given a partially complete code. Your task is to fill in the blanks (______).
+The square_of_sum method computes the sum of the elements in an input array and returns the square of the summed elements.
+{
+  def square_of_sum (my_array, proc_square, proc_sum)
+    sum = proc_sum.call(my_array)
+    proc_square.call(sum)
+  end
+
+  proc_square_number = #_________________________
+  proc_sum_array     = #_________________________
+  my_array = gets.split().map(&:to_i)
+
+  puts square_of_sum(my_array, proc_square_number, proc_sum_array)
+}
+For example:
+Input array: [1, 2, 3]
+Output: 36
+
 ---------------------        
 6)
 ---------------------
