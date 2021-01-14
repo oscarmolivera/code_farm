@@ -66,7 +66,6 @@ s.sub(/\w+/) {|i| hash[i] += 1}
 #p 65.chr    #=> "A"
 #p 230.chr   #=> "\xE6"
 #p 255.chr(Encoding::UTF-8)   #=> "\u00FF"
-
 s = "foo"
 begin
   s[4] = ?b 
@@ -79,6 +78,7 @@ ary << 1 && false
 true || ary << 2
 false && ary << 3
 false || ary << 4
+
 #p ary
 
 # p  "foo"  *  12 / 2
@@ -229,3 +229,49 @@ end
 # p plus_one_array([1, -9]) # => nil
 # p plus_one_array([]) # => nil
 # p plus_one_array([1, 2, 34])  # => nil
+
+
+=begin 
+
+=end
+
+def take(arr, len = 1)
+  len.times { arr.shift }
+  arr
+end
+
+take([1,2,3], 1).to_s
+# => [2, 3]
+take([1,2,3], 2).to_s
+# => [3]
+take([1,2,3]).to_s
+# => [2, 3]
+
+def area(l, b)
+  -> { l * b } 
+end
+
+x = 10.0; y = 20.0
+
+area_rectangle = area(x, y).()
+area_triangle = 0.5 * area(x, y).()
+
+# Write a lambda which takes an integer and square it
+square      = ->(a) { a**2 }
+
+# Write a lambda which takes an integer and increment it by 1
+plus_one    = ->(b) { b + 1 }
+
+# Write a lambda which takes an integer and multiply it by 2
+into_2      = ->(c) { c * 2 }
+
+# Write a lambda which takes two integers and adds them
+adder       = ->(d, e) { d + e }
+
+# Write a lambda which takes a hash and returns an array of hash values
+values_only = lambda(f) do
+                f.each do |k, v|
+                  
+                end
+              end
+end
