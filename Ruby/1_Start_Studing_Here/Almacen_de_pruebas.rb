@@ -16,12 +16,7 @@ num.sort
 end
 
 
-class Surface 
-  attr_reader :s 
-  def initialize(x,y) 
-    @s = x * y 
-  end 
-end
+
 
 class Volume < Surface 
   attr_reader :v 
@@ -33,7 +28,12 @@ class Volume < Surface
 end 
 
 
-
+class Surface 
+  attr_reader :s 
+  def initialize(x,y) 
+    @s = x * y 
+  end 
+end
 
 string  =  "test  code"  
 string.slice!(0,4)  
