@@ -1,0 +1,18 @@
+Ejecución de programas usando shebang
+
+Podemos ejecutar directamente el fichero utilizando en la primera línea el shebang, donde se indica el ejecutable que vamos a utilizar.
+
+#!/usr/bin/python3
+
+También podemos usar el programa env para preguntar al sistema por la ruta el interprete de python:
+
+#!/usr/bin/env python
+
+Por supuesto tenemos que dar permisos de ejecución al fichero.
+
+$ chmod +x hola.py
+
+ $ ./hola.py
+$ Hola mundo!!!
+
+https://www.python.org/dev/peps/pep-0008/
