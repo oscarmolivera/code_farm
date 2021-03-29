@@ -4,9 +4,7 @@
 
 def fibonacci (n)
   arreglo = []
-  (1..n).each do |c|
-    arreglo << c  
-  end
+  (1..n).each { |c| arreglo << c }
   arreglo.reduce(:*)
 end
 
@@ -15,6 +13,13 @@ puts fibonacci(5)
 =begin ############################################# OTHERS SOLUTIONS 
 2)
 
+def fibonacci (n)
+  arreglo = []
+  (1..n).each do |c|
+    arreglo << c  
+  end
+  arreglo.reduce(:*)
+end
 ----------------------------------------------------------------------
 3)
 
