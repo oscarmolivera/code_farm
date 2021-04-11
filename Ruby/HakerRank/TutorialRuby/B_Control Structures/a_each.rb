@@ -1,19 +1,33 @@
 =begin
 
+Ruby offers control structures that let you iterate through its collections.
+One such control structure is each.
 
+As you already know, HackerRank conducts many contests, and for every user who
+participates in a contest we update their score once the contest ends. You will
+be given a method called scoring with an array passed as an argument. Elements
+of the array are of the class User.
+
+User class has a method called update_score.
+
+Your task is to iterate through each of the elements in the array using each and
+call the method update_score on every element.
+
+hint
+  ```
+  array.each do |user|
+    # call update_score on `user` here
+  end
 =end
 
-def method(**params)
-  params
+def scoring(array)
+  # rubocop
+  array.each &:update_score 
+
+  # my aproach
+  array.each { |user| user.update_score }
 end
 
-p method(2, 3)
+p scoring(students)
 # => response
-p method(2, 3)
-# => response
-p method(2, 3)
-# => response
-p method(2, 3)
-# => response
-p method(2, 3)
-# => response
+
