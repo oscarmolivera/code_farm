@@ -22,10 +22,10 @@ hint
 
 def scoring(array)
   # rubocop
-  array.each &:update_score 
+  array.each(&:update_score)
 
   # my aproach
-  array.each { |user| user.update_score }
+  array.each {|user| user.update_score}
 end
 
 p scoring(students)
