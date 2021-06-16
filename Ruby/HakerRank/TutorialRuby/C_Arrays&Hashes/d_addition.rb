@@ -47,20 +47,22 @@ end
 
 def index_arr_multiple_add(arr, index)
   # add any two elements to the arr at the index
-  arr.insert(index, [2, 3])
-  arr.insert(index, [3, 7])
+  arr = index_arr_add(arr, 2, 4)
+  arr = index_arr_add(arr, 3, 0)
   arr
 end
 
 # arr = [9, 7, 6, 5, 4, 6, 7, 1, 2, 3]
 
-p neg_pos(arr, 4)
-# => 
-p first_element(arr)
-# => 9
-p last_element(arr)
-# => 3
-p first_n(arr, 3)
+p end_arr_add(arr, 4)
+# => [9, 7, 6, 5, 4, 6, 7, 1, 2, 3, 4]
+
+p begin_arr_add(arr, 4)
+# => [4, 9, 7, 6, 5, 4, 6, 7, 1, 2, 3]
+
+p index_arr_add(arr, 2, 4)
+# => [9, 7, 4, 6, 5, 4, 6, 7, 1, 2, 3]
+
+p index_arr_multiple_add(arr, 3)
 # =>  [9, 7, 6]
-p drop_n(arr, 5)
-# =>  [6, 7, 1, 2, 3]
+

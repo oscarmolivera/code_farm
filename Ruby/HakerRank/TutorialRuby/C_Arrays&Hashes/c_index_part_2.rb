@@ -35,7 +35,7 @@ arr = [9, 7, 6, 5, 4, 6, 7, 1, 2, 3]
 def neg_pos(arr, index)
   # return the element of the array at the position `index` from the end of the
   # list Clue : arr[-index]
-  arr[index*-1]
+  arr[-index]
 end
 
 def first_element(arr)

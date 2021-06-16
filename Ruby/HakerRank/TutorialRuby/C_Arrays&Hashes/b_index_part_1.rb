@@ -5,6 +5,7 @@ The positions are 0 indexed. Objects of the array can be accessed using the []
 method which may take various arguments, as explained below.
 
 ```
+  Given this array
   arr = [9, 5, 1, 2, 3, 4, 0, -1]
 
 A number which is the position of element:
@@ -16,7 +17,6 @@ A number which is the position of element:
   => 3
 
 A range indicating the start and the end position
-
 ```
   >>>arr[1..3] # .. indicates both indices are inclusive.
   => [5,1,2]
@@ -24,10 +24,22 @@ A range indicating the start and the end position
   => [5,1]
 
 Start index and the length of the range
-
 ```
   >>arr[1,4]
   => [5, 1, 2, 3]
+
+Navigating sections of the array in a control loop
+```
+  arr.each.with_index do |item, idx|
+    p arr[idx..(idx+3)] unless arr[idx..(idx+3)].size < 4
+  end
+  =>
+  [9, 5, 1, 2]
+  [5, 1, 2, 3]
+  [1, 2, 3, 4]
+  [2, 3, 4, 0]
+  [3, 4, 0, -1]
+  How can I do this for a Bidimensianal array?
 
 For this challenge, your task is to complete the functions using syntax as
 explained above.
