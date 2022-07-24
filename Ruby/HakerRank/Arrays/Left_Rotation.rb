@@ -1,4 +1,4 @@
-=begin 
+=begin
 A left rotation operation on an array shifts each of the array's elements 1 unit
 to the left.
 For example, if 2 left rotations are performed on array [1,2,3,4,5], then the
@@ -25,12 +25,12 @@ def rotLeft(arr, d)
 end
 
 p rotLeft([1,2,3,4,5,6,7,8,9], 1)
-=begin ############################################# OTHERS SOLUTIONS 
+=begin ############################################# OTHERS SOLUTIONS
 2) Solucion explicada
-La idea es separar el arreglo en dos partes, la primara todos los elementos que 
+La idea es separar el arreglo en dos partes, la primara todos los elementos que
 son igual o superior al numeros de espacios que se deben rotar
-[3,, 4, 5, 6, 7, 8, 9], y luego los que sean inferiores [1, 2]. Si el numero de 
-espacios a rotar es superior al numero de elementos que tiene un arreglo, se le 
+[3,, 4, 5, 6, 7, 8, 9], y luego los que sean inferiores [1, 2]. Si el numero de
+espacios a rotar es superior al numero de elementos que tiene un arreglo, se le
 consigue el modulo para reducir ese numero.
 
 con = arr.length
@@ -48,11 +48,11 @@ con = arr.length
 
 ***refactorizar***
   cont = arr.length
-  arr.map.with_index do|el, index| 
+  arr.map.with_index do|el, index|
   end
 
 ----------------------------------------------------------------------
-3)Solucion 
+3)Solucion
   return arr if d % a.length == 0
   mod = d % arr.length
   arr.map.with_index{|l, ix| a[ix+mod]}.map.with_index{|m, i| m.nil? ? a[i-mod-1]  : m}
@@ -107,7 +107,7 @@ new_array = []
   new_array
   ------------------------------------------------
    new_array[4] = a[d-3] # 3 - 3 =  0  # 3 - (4 - 1) = 0
- new_array[5] = a[d-2] # 3 - 2 =  1  # 3 - (5 - 3) = 0  
+ new_array[5] = a[d-2] # 3 - 2 =  1  # 3 - (5 - 3) = 0
  new_array[6] = a[d-1] # 3 - 1 =  2  # 3 - (6 - 5) = 0
  -----------------------------------------------------
   return a if d % a.length == 0
@@ -126,7 +126,7 @@ new_array = []
   nw_arry = []
   cont=0
   (0..(a.length() -1)).each do |c|
-    if c + mod >= a.length() 
+    if c + mod >= a.length()
       nw_arry[c] = a[cont]
       cont +=1
     else
