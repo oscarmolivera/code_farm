@@ -1,6 +1,6 @@
 # Multiplicar dos numeros sin usar el operador
 
-p ' ################## - Dividir dos numeros sin usar el Operador - ###############'
+p ' ################# - Dividir dos numeros sin usar el Operador - ##############'
 p ' Ingresa el primer numero: '
 num1 = gets.chomp.to_i
 p ' Ingresa el segundo numero: '

@@ -1,6 +1,6 @@
 # Como se puede restar dos numeros sin utilizar el operador de resta
 
-p ' ################## - Restar dos numeros sin usar el Operador - ###############'
+p ' ################# - Restar dos numeros sin usar el Operador - ##############'
 p ' Ingresa el primer numero: '
 num1 = gets.chomp.to_i
 p ' Ingresa el segundo numero: '
